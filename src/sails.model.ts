@@ -5,7 +5,7 @@ import { isObject } from "./utils";
 
 @Endpoint()
 export abstract class SailsModel implements SailsModelInterface {
-    @Property() id: string = "";
+    @Property() id: string|null = null;
     @Property({ type: Date }) createdAt: Date;
     @Property({ type: Date }) updatedAt: Date;
 
