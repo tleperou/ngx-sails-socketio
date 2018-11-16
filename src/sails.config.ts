@@ -1,7 +1,7 @@
 import { SailsOptions } from "./sails.options";
+const __SAILS_VERSION__ = "1.1.0";
 
-const __SAILS_VERSION__ = "0.11.0";
-const __OS_PLATFORM__ = "windows";
+const __OS_PLATFORM__ = "node";
 
 export class SailsConfig implements SailsOptions {
     public url = "ws://localhost:1337";
