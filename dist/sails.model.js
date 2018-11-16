@@ -12,7 +12,7 @@ import { Endpoint } from "./sails.decorator.endpoint";
 import { isObject } from "./utils";
 var SailsModel = /** @class */ (function () {
     function SailsModel() {
-        this.id = "";
+        this.id = null;
     }
     SailsModel_1 = SailsModel;
     SailsModel.prototype.getEndPoint = function () {
@@ -59,7 +59,7 @@ var SailsModel = /** @class */ (function () {
     var SailsModel_1;
     __decorate([
         Property(),
-        __metadata("design:type", String)
+        __metadata("design:type", Object)
     ], SailsModel.prototype, "id", void 0);
     __decorate([
         Property({ type: Date }),

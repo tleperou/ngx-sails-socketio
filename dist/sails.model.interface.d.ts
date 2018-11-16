@@ -1,5 +1,5 @@
 export interface SailsModelInterface {
-    id: string;
+    id: string | null;
     createdAt: Date;
     updatedAt: Date;
     getEndPoint: () => string;

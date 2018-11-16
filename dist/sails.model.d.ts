@@ -1,6 +1,6 @@
 import { SailsModelInterface } from "./sails.model.interface";
 export declare abstract class SailsModel implements SailsModelInterface {
-    id: string;
+    id: string | null;
     createdAt: Date;
     updatedAt: Date;
     getEndPoint(): string;

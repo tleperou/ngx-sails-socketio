@@ -1,5 +1,5 @@
-var __SAILS_VERSION__ = "0.11.0";
-var __OS_PLATFORM__ = "windows";
+var __SAILS_VERSION__ = "1.1.0";
+var __OS_PLATFORM__ = "node";
 var SailsConfig = /** @class */ (function () {
     function SailsConfig(options) {
         this.url = "ws://localhost:1337";

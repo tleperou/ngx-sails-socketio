@@ -94,18 +94,18 @@ var RequestCriteria = /** @class */ (function () {
     };
     RequestCriteria.prototype.whereNotIn = function (key, value) {
         if (isUndefined(this.criteria[key]) || isString(this.criteria[key])) {
-            this.criteria[key] = { "!": [value] };
+            this.criteria[key] = { "!=": [value] };
             return this;
         }
-        if (isUndefined(this.criteria[key]["!"])) {
-            this.criteria[key]["!"] = [value];
+        if (isUndefined(this.criteria[key]["!="])) {
+            this.criteria[key]["!="] = [value];
             return this;
         }
-        if (Array.isArray(this.criteria[key]["!"])) {
-            this.criteria[key]["!"].push(value);
+        if (Array.isArray(this.criteria[key]["!="])) {
+            this.criteria[key]["!="].push(value);
         }
         else {
-            this.criteria[key]["!"] = [this.criteria[key]["!"], value];
+            this.criteria[key]["!="] = [this.criteria[key]["!="], value];
         }
         return this;
     };

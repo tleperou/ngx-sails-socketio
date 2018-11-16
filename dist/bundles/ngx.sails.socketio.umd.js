@@ -70,8 +70,8 @@
         return SailsResponse;
     }());
 
-    var __SAILS_VERSION__ = "0.11.0";
-    var __OS_PLATFORM__ = "windows";
+    var __SAILS_VERSION__ = "1.1.0";
+    var __OS_PLATFORM__ = "node";
     var SailsConfig = /** @class */ (function () {
         function SailsConfig(options) {
             this.url = "ws://localhost:1337";
@@ -355,7 +355,7 @@
     };
     var SailsModel = /** @class */ (function () {
         function SailsModel() {
-            this.id = "";
+            this.id = null;
         }
         SailsModel_1 = SailsModel;
         SailsModel.prototype.getEndPoint = function () {
@@ -402,7 +402,7 @@
         var SailsModel_1;
         __decorate([
             jsonObjectMapper.JsonProperty(),
-            __metadata("design:type", String)
+            __metadata("design:type", Object)
         ], SailsModel.prototype, "id", void 0);
         __decorate([
             jsonObjectMapper.JsonProperty({ type: Date }),
@@ -647,18 +647,18 @@
         };
         RequestCriteria.prototype.whereNotIn = function (key, value) {
             if (isUndefined(this.criteria[key]) || isString(this.criteria[key])) {
-                this.criteria[key] = { "!": [value] };
+                this.criteria[key] = { "!=": [value] };
                 return this;
             }
-            if (isUndefined(this.criteria[key]["!"])) {
-                this.criteria[key]["!"] = [value];
+            if (isUndefined(this.criteria[key]["!="])) {
+                this.criteria[key]["!="] = [value];
                 return this;
             }
-            if (Array.isArray(this.criteria[key]["!"])) {
-                this.criteria[key]["!"].push(value);
+            if (Array.isArray(this.criteria[key]["!="])) {
+                this.criteria[key]["!="].push(value);
             }
             else {
-                this.criteria[key]["!"] = [this.criteria[key]["!"], value];
+                this.criteria[key]["!="] = [this.criteria[key]["!="], value];
             }
             return this;
         };
